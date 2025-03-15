@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Foster</title>
+  <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <button id="signIn" onclick="login1()" style="width:auto;">Sign in</button>
+
+  <div id="id01" class="modal">
+
+    <form class="modal-content animate" id="logInForm">
+
+      <div class="container">
+
+        <center> <label> Log In</label> </center>
+        <br>
+        <label for="uname"><b>Username/email address</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button id="logIn" onClick="loginLogin()" type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" required> Remember me
+        </label>
+        <br>
+        <br>
+        <label>Not a user yet?</label>
+        <button type="submit" id="signUpButton" onclick="signUp()">Sign Up</button>
+      </div>
+      <div class="container">
+        <button type="button" id="cancel" onclick="document.getElementById('id01').style.display='none'"
+          class="cancelbtn">Cancel</button>
+      </div>
+    </form>
+  </div>
+
+
+  <div id="id02" class="modal">
+
+    <form id="signUpForm" class="modal-content animate2">
+
+      <div class="container">
+        <center> <label><b>Sign Up</b></label> </center>
+        <br>
+        <label for="s_uname"> Create a Username </label>
+        <input type="text" placeholder="Create a username" name="s_uname" required>
+
+        <label for="email"> Email address </label>
+        <input type="text" placeholder="Enter Email Address" name="email" required>
+
+        <label for="s_psw"> Password </label>
+        <input type="text" placeholder="*******" name="s_psw" required>
+
+        <button type="submit" id="signUpButtonEnd">Sign Up</button>
+        <button type="submit" id="returnToLogIn" onClick="login1()">Log In</button>
+
+      </div>
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
